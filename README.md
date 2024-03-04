@@ -12,13 +12,13 @@ OpsHeaven's Terraform module to manage Hetzner DNS Zones.
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.7 |
-| <a name="requirement_github"></a> [github](#requirement\_github) | ~> 0.1 |
+| <a name="requirement_hetzner"></a> [hetzner](#requirement\_hetzner) | ~> 0.2 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_hetzner"></a> [hetzner](#provider\_hetzner) | n/a |
+| <a name="provider_hetzner"></a> [hetzner](#provider\_hetzner) | 0.2.0 |
 
 ## Inputs
 

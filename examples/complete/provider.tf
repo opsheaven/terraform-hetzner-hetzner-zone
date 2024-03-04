@@ -5,8 +5,8 @@ terraform {
 
   required_providers {
     hetzner = {
-      source  = "registry.terraform.io/opsheaven/hetzner"
-      version = "~> 0.1"
+      source  = "opsheaven/hetzner"
+      version = "~> 0.2"
     }
   }
 }

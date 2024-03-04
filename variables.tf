@@ -13,7 +13,7 @@ variable "zone" {
   })
 
   validation {
-    condition     = length(var.zone.name) > 3 && regex("((?!-)[A-Za-z0–9-]{1,63}(?<!-)\\.[A-Za-z]{2,6})$", var.zone.name)
+    condition     = length(var.zone.name) > 3 && regex("[A-Za-z0–9-]{1,63}\\.[a-z]{2,6}$", var.zone.name) != ""
     error_message = "Invalis zone name!"
   }
 
@@ -24,7 +24,7 @@ variable "zone" {
 
   validation {
     condition = alltrue([
-      for key, record in var.zone.records : contains(["A", "AAAA", "NS", "MX", "CNAME", "RP", "TXT", "SOA", "HINFO", "SRV", "DANE", "TLSA", "DS", "CAA"])
+      for key, record in var.zone.records : contains(["A", "AAAA", "NS", "MX", "CNAME", "RP", "TXT", "SOA", "HINFO", "SRV", "DANE", "TLSA", "DS", "CAA"], record.type)
       ]
     )
     error_message = "Invalid value for the record type! Supported values for the record type is A,AAAA,NS,MX,CNAME,RP,TXT,SOA,HINFO,SRV,DANE,TLSA,DS,CAA"

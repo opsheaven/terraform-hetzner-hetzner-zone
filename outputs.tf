@@ -1,9 +1,12 @@
 output "zone" {
   description = "Zone Information"
-  value       = hetzner_zone.this
+  value       = hetzner_dns_zone.this
 }
 
 output "records" {
   description = "Hetzner Zone Records"
-  value       = data.hetzner_zone_records.this.records
+  value = {
+    for key, record in var.zone.records : key => hetzner_dns_record.this[key]
+  }
+
 }

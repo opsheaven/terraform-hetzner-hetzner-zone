@@ -2,9 +2,9 @@ terraform {
   required_version = "~> 1.7"
 
   required_providers {
-    github = {
+    hetzner = {
       source  = "opsheaven/hetzner"
-      version = "~> 0.1"
+      version = "~> 0.2"
     }
   }
 }

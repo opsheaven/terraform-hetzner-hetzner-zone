@@ -1,13 +1,11 @@
-# Configure Github Organisation
+# Configure Hetzner Zone
 
 ## Usage
 
-The code in [main.tf](main.tf) defines the following code to manage an organization
-and setting it up with members with repositories.
+The code in [main.tf](main.tf) defines the following code to manage Hetzner Zone with records.
 
 ### Requirements
 
-The example requires two environment variables to work. Those are
+The example require DNS Token environment variables to work. Those are
 
-1. `GITHUB_TOKEN`: Github Access Token with organisation resource access permissions.
-2. `GITHUB_OWNER`: Github Organisation name.
+1. `HETZNER_DNS_API_TOKEN`: Hetzner Public DNS Api Authentication Token.
